@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "scenetalk"
+version = "0.1.0"
+description = "AI Image Describer for Blind Users"
+authors = [{ name = "Mukunda Katta" }]
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.0",
+    "pydantic>=2.0",
+    "click>=8.0",
+    "rich>=13.0",
+]
+
+[project.scripts]
+scenetalk = "scenetalk.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
